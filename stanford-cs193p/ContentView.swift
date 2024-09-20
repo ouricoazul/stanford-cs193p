@@ -58,6 +58,7 @@ struct ContentView: View {
             case Theme.round:
                 emojis = ["💿","💿","🎾","🎾","🍪","🍪","🪙","🪙","🪩","🪩","🛞","🛞"]
             }
+            emojis.shuffle()
             overallTheme = theme
         }, label: {
             VStack {
@@ -70,7 +71,7 @@ struct ContentView: View {
                     Text("Feeling blue?").font(.headline)
                 case Theme.round:
                     Image(systemName: "circle.hexagongrid.fill").font(.title)
-                    Text("R u around?").font(.headline)
+                    Text("U around?").font(.headline)
                 }
             }
         }).disabled(theme == overallTheme)
