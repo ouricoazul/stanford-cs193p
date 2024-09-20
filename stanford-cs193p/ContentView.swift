@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var emojis = ["🦔","🦔","🌵","🌵","🪡","🪡","🐡","🐡","🐝","🐝","📌","📌","🗡️","🗡️","🐗","🐗","🧛🏻‍♂️","🧛🏻‍♂️"]
     @State var overallTheme = Theme.prickly
-    
+    @State var cardColor = Color.red
     var body: some View {
         VStack {
             Text("Memorize!").font(.largeTitle)
@@ -18,7 +18,7 @@ struct ContentView: View {
                 cards
             }
             Spacer()
-            cardCountAdjusters
+            themeChangers
         }.padding()
     }
     
@@ -29,10 +29,10 @@ struct ContentView: View {
                     .aspectRatio(2/3, contentMode: .fit)
             }
         }
-        .foregroundColor(.blue)
+        .foregroundColor(cardColor)
     }
     
-    var cardCountAdjusters: some View {
+    var themeChangers: some View {
         HStack {
             changeTheme(to:Theme.prickly)
             Spacer()
@@ -53,10 +53,13 @@ struct ContentView: View {
             switch theme {
             case Theme.prickly:
                 emojis = ["🦔","🦔","🌵","🌵","🪡","🪡","🐡","🐡","🐝","🐝","📌","📌","🗡️","🗡️","🐗","🐗","🧛🏻‍♂️","🧛🏻‍♂️"]
+                cardColor = Color.red
             case Theme.blue:
                 emojis = ["💎","💎","🥏","🥏","🫐","🫐","🦋","🦋","🧿","🧿","🦕","🦕","👖","👖","🥶","🥶","🧢","🧢","❄️","❄️","🛝","🛝"]
+                cardColor = Color.blue
             case Theme.round:
                 emojis = ["💿","💿","🎾","🎾","🍪","🍪","🪙","🪙","🪩","🪩","🛞","🛞"]
+                cardColor = Color.green
             }
             emojis.shuffle()
             overallTheme = theme
