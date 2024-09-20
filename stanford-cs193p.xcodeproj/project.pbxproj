@@ -35,16 +35,6 @@
 			path = "stanford-cs193p";
 			sourceTree = "<group>";
 		};
-		37EAD3482C9D1C84006E97B5 /* stanford-cs193pTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "stanford-cs193pTests";
-			sourceTree = "<group>";
-		};
-		37EAD3522C9D1C84006E97B5 /* stanford-cs193pUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "stanford-cs193pUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				37EAD3372C9D1C82006E97B5 /* stanford-cs193p */,
-				37EAD3482C9D1C84006E97B5 /* stanford-cs193pTests */,
-				37EAD3522C9D1C84006E97B5 /* stanford-cs193pUITests */,
 				37EAD3362C9D1C82006E97B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				37EAD3472C9D1C84006E97B5 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				37EAD3482C9D1C84006E97B5 /* stanford-cs193pTests */,
-			);
 			name = "stanford-cs193pTests";
 			packageProductDependencies = (
 			);
@@ -152,9 +137,6 @@
 			);
 			dependencies = (
 				37EAD3512C9D1C84006E97B5 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				37EAD3522C9D1C84006E97B5 /* stanford-cs193pUITests */,
 			);
 			name = "stanford-cs193pUITests";
 			packageProductDependencies = (
