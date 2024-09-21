@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var emojis = ["🦔","🦔","🌵","🌵","🪡","🪡","🐡","🐡","🐝","🐝","📌","📌","🗡️","🗡️","🐗","🐗","🧛🏻‍♂️","🧛🏻‍♂️"]
     @State var overallTheme = Theme.prickly
     @State var cardColor = Color.red
+    @State var numCards = 18
     var body: some View {
         VStack {
             Text("Memorize!").font(.largeTitle)
@@ -61,6 +62,11 @@ struct ContentView: View {
                 emojis = ["💿","💿","🎾","🎾","🍪","🍪","🪙","🪙","🪩","🪩","🛞","🛞"]
                 cardColor = Color.green
             }
+            numCards = Int.random(in: 7..<emojis.count)
+            if numCards % 2 != 0 {
+                numCards += 1
+            }
+            emojis = Array<String>(emojis[0..<numCards])
             emojis.shuffle()
             overallTheme = theme
         }, label: {
